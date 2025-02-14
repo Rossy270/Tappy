@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://bxkegqlsl4xl6"]
+
+[ext_resource type="AudioStream" uid="uid://dnr7o228uxhun" path="res://Assets/audio/score.wav" id="1_4hptn"]
+[ext_resource type="Script" path="res://Scripts/Pipes.cs" id="1_743ft"]
+[ext_resource type="PackedScene" uid="uid://desvywondpo3t" path="res://Scenes/Laser/Laser.tscn" id="1_hsqb2"]
+[ext_resource type="PackedScene" uid="uid://btuniv883hvvp" path="res://Scenes/Pipes/Pipe.tscn" id="2_62pa5"]
+
+[node name="Pipes" type="Node2D"]
+script = ExtResource("1_743ft")
+
+[node name="Laser" parent="." instance=ExtResource("1_hsqb2")]
+position = Vector2(0, -106)
+
+[node name="Pipe" parent="." instance=ExtResource("2_62pa5")]
+
+[node name="Pipe2" parent="." instance=ExtResource("2_62pa5")]
+position = Vector2(0, -217)
+rotation = 3.14159
+
+[node name="ScoreEffect" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("1_4hptn")

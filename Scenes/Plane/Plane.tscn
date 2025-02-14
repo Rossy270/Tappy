@@ -41,6 +41,7 @@ script = ExtResource("1_j5nmp")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_dapq2")
 animation = &"fly"
+autoplay = "fly"
 frame_progress = 0.335931
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
